@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    cursor: none;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    transition: 5s ease;
+    background: #212121;
+    user-select: none;  
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: 0.5s ease;
+}
+
+.divv {
+    display: flex;
+    transition: 0.5s ease;
+}
+
+li {
+    list-style: none;
+    display: grid;
+    place-items: center;
+    font-size: 0px;
+    transition: 0.5s ease;
+}
+
+.box {
+    margin: 1px;
+    width: 75px;
+    height: 75px;
+    transition: 0.25s ease;
+    border-radius: 12px;
+}
+#tog {
+    color :white;
+    margin: 10px 0px;
+    transition: 2s ease;
+}
+
+
+
+.allimg {
+    width: 55px;
+    position: relative;
+    transition: 2s ease;
+    bottom: 5px;
+}
+
+.allpawn {
+    transform: scale(.65);
+    transition: 5s ease;
+}
+
+.authcont {
+    width: 100vw;
+    transition: 0.5s ease;
+}
+
+.author {
+    float: right;
+    margin-right: 50px;
+    transition: 0.5s ease;
+
+}
+
+
+@media (max-width:650px){
+
+    #tog {
+        margin-bottom: 70px;
+
+    }
+
+    .box {
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .allimg {
+        width: 7vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim 0.5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid red;
+    border-radius: 50%;
+    opacity: 1;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(.0);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(4);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 1s forwards;
+    border: 3px dashed red;
+}
+
+p {
+  color: white;
+  font-family: 'arial';
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+  }
+  a {
+    color: teal;
+  }
